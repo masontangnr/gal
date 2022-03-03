@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## Student data from CSV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Several cohorts worth of student data are available in CSV format. Using tests, create a function which returns an array of cohort objects representing cohort information present in the CSV. The expected array length is the number of cohorts found in the data.
 
-## Available Scripts
+Use a Git repository to track your work.
 
-In the project directory, you can run:
+A cohort object should provide:
 
-### `npm start`
+* an id for the cohort
+* the average grade of that cohort
+* "min" which holds the minimum grade of the class and their first name, last name, and email
+* "max" which holds the maximum grade of the class and their first name, last name, and email
+* "students" which is an array of students belonging to that cohort
+    * Include their first name, last name, email, grade, years of experience, and zodiac sign
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The function should be capable of receiving letter grade input, or no input at all. When no input is given, all students are returned. When a letter grade is given, the min, max, and student set should contain only students who received that letter grade. The letter grade conversion ranges are as follows:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Grade | Range  |
+|-------|--------|
+| A     | 93-100 |
+| A-    | 90-92  |
+| B+    | 87-89  |
+| B     | 83-86  |
+| B-    | 80-82  |
+| C+    | 77-79  |
+| C     | 73-76  |
+| C-    | 70-72  |
+| D+    | 67-69  |
+| D     | 63-66  |
+| D-    | 60-62  |
+| F     | < 60   |
